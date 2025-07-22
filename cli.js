@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * JackTools - Translation Builder
+ * JackToolBox - Translate
  * Advanced JSON Translation Tool
  *
  * A powerful, interactive command-line tool for managing

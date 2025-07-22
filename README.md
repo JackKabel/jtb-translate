@@ -2,9 +2,11 @@
 
 > **Advanced JSON Translation Tool** - A powerful, interactive command-line application for managing multilingual JSON files with style and efficiency.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/npm/v/jacktoolbox-translate)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Node.js](https://img.shields.io/badge/node.js-14%2B-brightgreen.svg)
+![npm](https://img.shields.io/npm/dt/jacktoolbox-translate)
+
 
 ## ✨ Features
 
