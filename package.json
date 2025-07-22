@@ -6,6 +6,10 @@
   "bin": {
     "jtb-translate": "./cli.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackKabel/jtb-translate.git"
+  },
   "files": [
     "cli.js",
     "README.md"

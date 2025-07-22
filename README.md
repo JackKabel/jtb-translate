@@ -1,4 +1,4 @@
-# 🌍 JackTools - Translation Builder
+# 🌍 JackToolBox - Translate
 
 > **Advanced JSON Translation Tool** - A powerful, interactive command-line application for managing multilingual JSON files with style and efficiency.
 
@@ -12,21 +12,8 @@
 - **Rich colors and emojis** for enhanced visual experience
 - **Progress bars** showing real-time completion status
 - **Boxed displays** for important information and statistics
-- **Language flags** and family groupings for easy identification
+- **Language flags** for easy identification
 - **Clear screen functionality** for distraction-free translation
-
-### 🌍 **Extensive Language Support**
-Support for **25+ languages** across multiple language families:
-
-**European Languages:**
-- 🇬🇧 English, 🇷🇴 Romanian, 🇭🇺 Hungarian, 🇫🇷 French, 🇩🇪 German
-- 🇪🇸 Spanish, 🇮🇹 Italian, 🇵🇹 Portuguese, 🇳🇱 Dutch, 🇵🇱 Polish
-- 🇨🇿 Czech, 🇸🇰 Slovak, 🇷🇺 Russian, 🇹🇷 Turkish, 🇸🇪 Swedish
-- 🇳🇴 Norwegian, 🇩🇰 Danish
-
-**Asian Languages:**
-- 🇨🇳 Chinese, 🇯🇵 Japanese, 🇰🇷 Korean, 🇮🇳 Hindi
-- 🇸🇦 Arabic, 🇹🇭 Thai, 🇻🇳 Vietnamese
 
 ### 🚀 **Smart Features**
 - **Auto-save** every 10 translations to prevent data loss
@@ -44,53 +31,50 @@ Support for **25+ languages** across multiple language families:
 
 ## 🛠️ Installation & Setup
 
-### Prerequisites
-- Node.js 14+ installed on your system
-
-### Quick Start
-
-1. **Save the script** as `cli.js`
-2. **Make it executable** (Unix/Linux/Mac):
-   ```bash
-   chmod +x cli.js
-   ```
-3. **Run the tool**:
-   ```bash
-   node cli.js
-   ```
-
-### Alternative Installation
-Create an npm script in your `package.json`:
-```json
-{
-  "scripts": {
-    "translate": "node cli.js"
-  }
-}
+### Method 1: NPM Installation (Recommended)
+```bash
+npm install -g jacktoolbox-translate
 ```
 
-Then run with: `npm run translate`
+Then run anywhere with:
+```bash
+jtb-translate
+```
+
+### Method 2: Local Installation
+1. Clone or download the repository
+2. Install locally:
+   ```bash
+   npm install
+   npm link
+   ```
+3. Run with: `jtb-translate`
+
+### Method 3: Direct Execution
+```bash
+node cli.js
+```
 
 ## 📖 How to Use
 
 ### 1. **Starting the Application**
 ```bash
-node cli.js
+jtb-translate
 ```
 
-The application will display a beautiful welcome screen with the JackTools branding.
+The application displays a beautiful welcome screen.
 
 ### 2. **Select Source File**
 You have two options:
 
 **Option A: Direct File Path**
 ```
-📄 Enter path to source file: ./locales/en.json
+📄 Enter path to source file (or directory to scan): ./locales/en.json
 ```
 
 **Option B: Directory Scanning**
 ```
-📄 Enter path to source file: ./locales/
+📄 Enter path to source file (or directory to scan): ./locales/
 ```
 The tool will scan the directory and show all available translation files:
 ```
@@ -101,54 +85,62 @@ The tool will scan the directory and show all available translation files:
 ```
 
 ### 3. **Choose Target Language**
-The application displays languages organized by family:
+The application shows available translation files and prompts for a language code:
 ```
-🌍 Available Languages by Family:
+📁 Available translation files:
+   🇬🇧 en (English)  •  🇫🇷 fr (French)  •  🇩🇪 de (German)
 
-▼ Romance
-   ● 🇷🇴 ro - Romanian
-   ○ 🇫🇷 fr - French
-   ○ 🇪🇸 es - Spanish
+💡 Enter any ISO language code (en, fr, de, es, etc.)
 
-▼ Germanic
-   ● 🇬🇧 en - English
-   ○ 🇩🇪 de - German
+🎯 Enter target language code (e.g., en, fr, de): ro
 ```
 
-Enter the language code: `ro` (for Romanian)
+The tool supports fuzzy matching - you can enter partial language names or codes.
 
 ### 4. **Review Translation Overview**
 ```
-┌─────────────────────────────────┐
-│  Translation Overview:          │
-│  📝 Source: 145 keys, 2,340 chars │
-│  🎯 Target: 89 keys, 1,567 chars  │
-│  ⏳ Remaining: 56 keys to translate │
-└─────────────────────────────────┐
+┌────────────────────────────────────────────────────────────────┐
+│  Translation Overview:                                         │
+│  📝 Source: 145 keys, 2340 chars (avg: 16)                     │
+│  🎯 Target: 89 keys, 1567 chars (avg: 18)                      │
+│  ⏳ Remaining: 56 keys to translate                            │
+└────────────────────────────────────────────────────────────────┘
+
+🚀 Ready to start translating? (y/n): y
 ```
 
 ### 5. **Interactive Translation**
 The main translation interface shows:
 
 ```
-════════════════════════════════════════════════════════════
-[████████████░░░░░░░░░░░░░░░░░░] 67% (38/56)
-
+════════════════════════════════════════════════════════════════════════════════
+[██████████████████████░░░░░░░░░] 67% (38/56)
 🗝️ Full Key: navigation.menu.items.dashboard.title
 🇬🇧 English: Dashboard Overview
 🇷🇴 Romanian: 
-────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────
 💡 Commands: Enter=skip | :q=quit | :s=save | :stats=progress
-────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────
 ➤ 
 ```
 
 ### 6. **Translation Commands**
-- **Type your translation** and press Enter
-- **Press Enter alone** to skip
-- **Type `:q`** to quit and save
+- **Type your translation** and press Enter to save
+- **Press Enter alone** to skip current translation
+- **Type `:q`** to quit and save progress
 - **Type `:s`** to manually save progress
 - **Type `:stats`** to view detailed statistics
+
+### 7. **Statistics View**
+Type `:stats` during translation to see:
+```
+┌────────────────────────────────────────────────────────────────┐
+│  Translation Progress:                                         │
+│  Completed: 89/145 (61%)                                       │
+│  Current session: 7 unsaved changes                            │
+│  Remaining in session: 18                                      │
+└────────────────────────────────────────────────────────────────┘
+```
 
 ## 🏗️ Technical Architecture
 
@@ -175,20 +167,21 @@ The main translation interface shows:
 
 #### 2. **Visual System**
 - **ANSI Color Codes** - Rich terminal colors
-- **Unicode Characters** - Boxes, progress bars, emojis
-- **Dynamic Layout** - Responsive to terminal width
+- **Progress Bars** - Visual completion tracking
+- **Emoji Integration** - Enhanced visual appeal
 
 #### 3. **State Management**
 - **In-memory translation cache** for performance
-- **Auto-save mechanism** preventing data loss
+- **Auto-save mechanism** (every 10 translations)
 - **Progress tracking** across sessions
+- **Resume capability** for interrupted sessions
 
-#### 4. **Language Detection**
+#### 4. **Language Detection & Matching**
 ```javascript
 const languages = {
     en: { name: 'English', flag: '🇬🇧', family: 'Germanic' },
     ro: { name: 'Romanian', flag: '🇷🇴', family: 'Romance' }
-    // ... 25+ languages
+    // ... 25+ languages with family groupings
 };
 ```
 
@@ -221,51 +214,52 @@ const languages = {
 ```
 
 #### Output Format
-Same nested structure as input, but with translated values.
+Same nested structure as input, preserving the original JSON hierarchy.
 
 ### **Error Handling & Validation**
-- **JSON parsing validation** with helpful error messages
+- **JSON parsing validation** with user-friendly error messages
 - **File system error handling** for missing files/permissions
-- **Language code validation** with fuzzy matching
-- **Graceful degradation** for partial translations
+- **Language code validation** with fuzzy matching fallback
+- **Graceful interruption handling** (Ctrl+C protection)
 
-### **Performance Optimizations**
+### **Performance Features**
 - **Lazy loading** of translation files
-- **Efficient flattening algorithm** for large JSON files
-- **Memory-conscious processing** for thousands of keys
-- **Minimal file I/O** with batched saves
+- **Efficient flattening/unflattening algorithms**
+- **Memory-conscious processing** for large JSON files
+- **Batched auto-save** to minimize file I/O
 
 ## 📊 Usage Examples
 
 ### **Small Project** (50-100 keys)
-Perfect for small applications or websites with basic internationalization needs.
+Perfect for small applications, landing pages, or simple websites.
 
 ### **Medium Project** (500-1000 keys)
-Ideal for web applications with comprehensive UI text and messages.
+Ideal for web applications with comprehensive UI text and user messages.
 
 ### **Large Project** (2000+ keys)
-Excellent for enterprise applications with complex nested structures.
+Excellent for enterprise applications with complex nested translation structures.
 
 ## 🎯 Use Cases
 
-### **Web Development**
-- React/Vue/Angular applications
-- Express.js backend messages
-- Static site generators (Gatsby, Next.js)
+### **Frontend Development**
+- React/Vue/Angular i18n files
+- Next.js internationalization
+- Static site generators
 
-### **Mobile Development**
-- React Native applications
-- Electron desktop apps
-- Progressive Web Apps (PWAs)
-
-### **Content Management**
-- CMS internationalization
-- Documentation translation
+### **Backend Development**
 - API response messages
+- Email templates
+- Error message translations
+
+### **Mobile & Desktop**
+- React Native apps
+- Electron applications
+- Progressive Web Apps (PWAs)
 
 ## 🔧 Customization Options
 
 ### **Adding New Languages**
+Edit the `languages` object in `cli.js`:
 ```javascript
 const languages = {
     // Add your language here
@@ -275,39 +269,82 @@ const languages = {
 
 ### **Adjusting Auto-save Frequency**
 ```javascript
-const AUTOSAVE_INTERVAL = 10; // Change to your preference
+const AUTOSAVE_INTERVAL = 10; // Change to your preference (number of translations)
 ```
 
-### **Modifying Visual Theme**
+### **Modifying Colors**
 ```javascript
 const colors = {
-    // Customize colors
+    // Customize the color scheme
     primary: '\x1b[36m',    // Cyan
     success: '\x1b[32m',    // Green
     warning: '\x1b[33m',    // Yellow
 };
 ```
 
+## 📁 Project Structure
+```
+jacktoolbox-translate/
+├── cli.js          # Main application file
+├── package.json    # NPM package configuration
+├── README.md       # Documentation
+└── LICENSE         # MIT license file
+```
+
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+Contributions are welcome! Here's how you can help:
 
 1. **Add more languages** to the language database
-2. **Improve visual design** with better colors and layouts
-3. **Add new features** like batch processing or AI integration
+2. **Improve the visual interface** with better layouts and colors
+3. **Add new features** like batch processing or export options
 4. **Fix bugs** and improve error handling
-5. **Write tests** for better code reliability
+5. **Write documentation** and usage examples
+
+### Development Setup
+```bash
+git clone https://github.com/JackKabel/jtb-translate.git
+cd jtb-translate
+npm install
+node cli.js  # Test locally
+```
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**"File not found" error:**
+- Check that the file path is correct
+- Ensure the file has .json extension
+- Verify read permissions
+
+**"Invalid JSON" error:**
+- Validate your JSON syntax
+- Check for trailing commas or missing quotes
+- Use a JSON validator online
+
+**Terminal display issues:**
+- Ensure your terminal supports Unicode characters
+- Try a modern terminal (Windows Terminal, iTerm2, etc.)
 
 ## 📝 License
 
-MIT License - feel free to use this tool in your personal and commercial projects.
+MIT License - See [LICENSE](LICENSE) file for details.
+
+## 📞 Support
+
+- **GitHub Issues**: Report bugs and request features
+- **Repository**: https://github.com/JackKabel/jtb-translate.git
+- **NPM Package**: jacktoolbox-translate
 
 ## 🙏 Acknowledgments
 
 - **Unicode Consortium** - For emoji and character standards
 - **Node.js Community** - For excellent documentation and tools
-- **International developers** - For inspiration on multilingual challenges
+- **Contributors** - Thank you for making this tool better!
 
 ---
 
-**JackTools - Translation Builder** - Making internationalization beautiful, one translation at a time! 🌍✨
+**JackToolBox - Translate**
+
+Making internationalization beautiful, one translation at a time! 🌍✨
