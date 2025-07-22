@@ -1,0 +1,32 @@
+{
+  "name": "jacktoolbox-translate",
+  "version": "1.0.0",
+  "description": "Advanced JSON Translation Tool - A powerful, interactive command-line application for managing multilingual JSON files for you projects.",
+  "main": "cli.js",
+  "bin": {
+    "jtb-translate": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "README.md"
+  ],
+  "keywords": [
+    "i18n",
+    "json",
+    "translation",
+    "multilingual",
+    "cli",
+    "tool",
+    "localization",
+    "json-translate",
+    "l10n",
+    "interactive",
+    "internationalization",
+    "node-cli",
+    "translator",
+    "command-line"
+  ],
+  "author": "Antal-Tompos Ábel",
+  "license": "MIT",
+  "type": "commonjs"
+}
