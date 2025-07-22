@@ -8,6 +8,8 @@
 ![npm](https://img.shields.io/npm/dt/jacktoolbox-translate)
 
 
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-%23FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/antal.abel)
+
 ## ✨ Features
 
 ### 🎨 **Beautiful Terminal Interface**
@@ -344,6 +346,9 @@ MIT License - See [LICENSE](LICENSE) file for details.
 - **Unicode Consortium** - For emoji and character standards
 - **Node.js Community** - For excellent documentation and tools
 - **Contributors** - Thank you for making this tool better!
+
+## 💖 Support the Project
+[![Buy Me a Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/antal.abel)
 
 ---
 
